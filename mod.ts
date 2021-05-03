@@ -75,11 +75,7 @@ export default class Config {
         );
       }
 
-      this._options.cwd = envPaths(
-        this._options.projectName,
-        { suffix: this._options.projectSuffix || defaultSuffix },
-      )
-        .config;
+      this._options.cwd = envPaths(this._options.projectName).config;
     }
 
     // Did we provided default value for our configs?
